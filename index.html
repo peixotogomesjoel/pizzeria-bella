@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella Napoli — Pizzeria Authentique & Trattoria</title>
+  <meta name="description" content="Pizzas napolitaines artisanales cuites au feu de bois. Pâte levée 48h et produits d'origine italienne.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-serif { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+<body class="bg-amber-50/30 text-stone-800 antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- ================= BARRE DU HAUT / NOTIFICATION ================= -->
+  <div class="bg-stone-900 text-stone-300 text-xs py-2 px-4 text-center font-medium flex justify-center items-center gap-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+    <span>Ouvert aujourd'hui de 12h à 14h30 et de 19h à 23h • Pâte levée 48h</span>
+  </div>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-stone-200/80 transition-all">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2">
+        <span class="text-3xl">🍕</span>
+        <div>
+          <span class="font-serif text-2xl font-bold tracking-tight text-stone-900 block leading-tight">Bella Napoli</span>
+          <span class="text-[10px] tracking-widest uppercase text-amber-700 font-semibold block">Trattoria Artigianale</span>
+        </div>
+      </a>
+
+      <!-- Menu Liens Desktop -->
+      <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-stone-600">
+        <a href="#histoire" class="hover:text-amber-600 transition">Notre Histoire</a>
+        <a href="#carte" class="hover:text-amber-600 transition">La Carte</a>
+        <a href="#avis" class="hover:text-amber-600 transition">Avis Clients</a>
+        <a href="#contact" class="hover:text-amber-600 transition">Horaires & Accès</a>
+      </nav>
+
+      <!-- Bouton d'action CTA Desktop -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="tel:+33123456789" class="text-sm font-semibold text-stone-800 hover:text-amber-600 px-3 py-2 transition flex items-center gap-1.5">
+          <span>📞</span> 01 23 45 67 89
+        </a>
+        <a href="#reserver" class="bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-md shadow-amber-600/20 transition-all transform hover:-translate-y-0.5">
+          Réserver une table
+        </a>
+      </div>
+
+      <!-- Bouton Mobile Burger -->
+      <button id="menu-btn" class="md:hidden p-2 text-stone-700 hover:text-stone-900 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menu Déroulant Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-6 py-6 space-y-4">
+      <a href="#histoire" class="block text-base font-semibold text-stone-700 hover:text-amber-600">Notre Histoire</a>
+      <a href="#carte" class="block text-base font-semibold text-stone-700 hover:text-amber-600">La Carte</a>
+      <a href="#avis" class="block text-base font-semibold text-stone-700 hover:text-amber-600">Avis Clients</a>
+      <a href="#contact" class="block text-base font-semibold text-stone-700 hover:text-amber-600">Horaires & Accès</a>
+      <div class="pt-4 border-t border-stone-100 flex flex-col gap-3">
+        <a href="tel:+33123456789" class="w-full text-center py-2.5 border border-stone-300 rounded-xl font-semibold text-stone-800">
+          📞 01 23 45 67 89
+        </a>
+        <a href="#reserver" class="w-full text-center bg-amber-600 text-white py-2.5 rounded-xl font-semibold shadow-md">
+          Réserver une table
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative overflow-hidden py-16 sm:py-24 bg-gradient-to-b from-amber-100/50 via-white to-amber-50/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Texte Hero -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 text-amber-800 text-xs font-bold tracking-wide uppercase">
+            <span>🇮🇹</span> Four à bois traditionnel • Depuis 2012
+          </div>
+          <h1 class="text-4xl sm:text-6xl font-serif font-bold text-stone-900 leading-[1.15]">
+            La véritable pizza napolitaine au cœur de votre ville.
+          </h1>
+          <p class="text-lg text-stone-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            Une pâte au levain naturel maturée pendant 48 heures, cuite à 450°C dans notre four en pierre réfractaire. Mozzarella di Bufala Campana AOP et tomates San Marzano.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#carte" class="w-full sm:w-auto bg-stone-900 hover:bg-stone-800 text-white font-semibold px-8 py-3.5 rounded-full text-center transition shadow-lg">
+              Découvrir la carte
+            </a>
+            <a href="#reserver" class="w-full sm:w-auto border-2 border-stone-300 hover:border-amber-600 hover:text-amber-600 text-stone-800 font-semibold px-7 py-3 rounded-full text-center transition flex items-center justify-center gap-2">
+              <span>📅</span> Réserver en 1 clic
+            </a>
+          </div>
+
+          <!-- Preuve sociale (Avis) -->
+          <div class="pt-6 flex items-center justify-center lg:justify-start gap-4">
+            <div class="flex -space-x-2">
+              <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Client">
+              <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Client">
+              <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Client">
+            </div>
+            <div class="text-left text-xs">
+              <div class="flex text-amber-500 text-sm">★★★★★</div>
+              <p class="text-stone-600 font-medium"><strong class="text-stone-900">4.9 / 5</strong> sur Google (+350 avis)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Hero -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl ring-1 ring-stone-900/10">
+              <img class="w-full h-full object-cover transform hover:scale-105 transition duration-700" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Pizza Napolitaine sortie du four">
+            </div>
+            <!-- Badge Flottant -->
+            <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-stone-100 flex items-center gap-3">
+              <span class="text-3xl">🔥</span>
+              <div>
+                <p class="text-xs text-stone-500 uppercase tracking-wider font-semibold">Cuisson Express</p>
+                <p class="text-sm font-bold text-stone-900">90 secondes à 450°C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CARACTÉRISTIQUES ================= -->
+  <section id="histoire" class="py-16 bg-white border-y border-stone-200/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="flex items-start gap-4 p-6 rounded-2xl bg-amber-50/50 border border-amber-100/70">
+          <div class="text-3xl p-3 bg-white rounded-xl shadow-sm">🌾</div>
+          <div>
+            <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Farine Tipo 00</h3>
+            <p class="text-sm text-stone-600 leading-relaxed">Importée directement des moulins de Campanie pour une pâte légère et digeste.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-6 rounded-2xl bg-amber-50/50 border border-amber-100/70">
+          <div class="text-3xl p-3 bg-white rounded-xl shadow-sm">🍅</div>
+          <div>
+            <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">San Marzano AOP</h3>
+            <p class="text-sm text-stone-600 leading-relaxed">Tomates gorgées du soleil du Vésuve, cueillies à maturité pour une saveur unique.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-6 rounded-2xl bg-amber-50/50 border border-amber-100/70">
+          <div class="text-3xl p-3 bg-white rounded-xl shadow-sm">🧀</div>
+          <div>
+            <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Mozzarella Fraîche</h3>
+            <p class="text-sm text-stone-600 leading-relaxed">Fior di Latte et Bufala crémeuse livrées deux fois par semaine depuis l'Italie.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LA CARTE DU RESTAURANT ================= -->
+  <section id="carte" class="py-20 bg-stone-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center space-y-3 mb-12">
+        <span class="text-xs uppercase tracking-widest font-bold text-amber-700">Nos Incontournables</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900">La Carte des Pizzas</h2>
+        <p class="text-stone-600 text-sm max-w-lg mx-auto">Toutes nos pizzas sont préparées minute sous vos yeux dans la plus pure tradition napolitaine.</p>
+      </div>
+
+      <!-- Liste des Pizzas -->
+      <div class="space-y-4">
+        
+        <!-- Item 1 -->
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200/80 flex justify-between items-start gap-4 hover:border-amber-400 transition">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <h4 class="font-bold text-stone-900 text-lg">Margherita Verace</h4>
+              <span class="text-[10px] bg-red-100 text-red-700 font-bold px-2 py-0.5 rounded-full uppercase">Classique</span>
+            </div>
+            <p class="text-sm text-stone-600">Tomates San Marzano AOP, Mozzarella di Bufala, basilic frais, huile d'olive extra vierge.</p>
+          </div>
+          <span class="text-lg font-bold text-amber-700 whitespace-nowrap">13,50 €</span>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200/80 flex justify-between items-start gap-4 hover:border-amber-400 transition">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <h4 class="font-bold text-stone-900 text-lg">Tartufo Speziale</h4>
+              <span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full uppercase">Best-Seller</span>
+            </div>
+            <p class="text-sm text-stone-600">Crème de truffe noire, fior di latte, champignons sautés, copeaux de parmesan 24 mois, roquette.</p>
+          </div>
+          <span class="text-lg font-bold text-amber-700 whitespace-nowrap">17,00 €</span>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200/80 flex justify-between items-start gap-4 hover:border-amber-400 transition">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <h4 class="font-bold text-stone-900 text-lg">Diavola Calabra</h4>
+              <span class="text-[10px] bg-amber-50 text-stone-700 font-bold px-2 py-0.5 rounded-full uppercase">Pimentée 🌶️</span>
+            </div>
+            <p class="text-sm text-stone-600">Tomates San Marzano, fior di latte, Spianata piquante de Calabre, Nduja artisanale, olives taggiasche.</p>
+          </div>
+          <span class="text-lg font-bold text-amber-700 whitespace-nowrap">15,50 €</span>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200/80 flex justify-between items-start gap-4 hover:border-amber-400 transition">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <h4 class="font-bold text-stone-900 text-lg">Parma & Burrata</h4>
+            </div>
+            <p class="text-sm text-stone-600">Tomates San Marzano, après cuisson : Jambon de Parme affiné 18 mois, coeur de Burrata crémeuse, tomates cerises.</p>
+          </div>
+          <span class="text-lg font-bold text-amber-700 whitespace-nowrap">18,00 €</span>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="tel:+33123456789" class="inline-flex items-center gap-2 text-sm font-semibold text-amber-700 hover:text-amber-800 underline">
+          <span>🍕</span> Télécharger notre menu complet (PDF)
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= RÉSERVATION & CONTACT ================= -->
+  <section id="reserver" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="bg-stone-900 text-white rounded-3xl p-8 sm:p-12 shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs uppercase font-bold tracking-widest text-amber-400">Réservation Express</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold leading-tight">Réservez votre table en quelques secondes</h2>
+          <p class="text-stone-300 text-sm leading-relaxed">
+            Pour le midi ou le soir, notre équipe vous accueille chaleureusement avec le sourire italien. Les réservations sont conseillées pour le week-end !
+          </p>
+          
+          <div class="pt-4 space-y-2 text-sm text-stone-300">
+            <p>📍 <strong>Adresse :</strong> 14 Rue de la Paix, 75002 Paris</p>
+            <p>🕒 <strong>Midi :</strong> 12h00 - 14h30 • <strong>Soir :</strong> 19h00 - 23h00</p>
+            <p>📞 <strong>Téléphone direct :</strong> 01 23 45 67 89</p>
+          </div>
+        </div>
+
+        <!-- Formulaire de contact rapide -->
+        <div class="lg:col-span-6 bg-stone-800/90 border border-stone-700 p-6 sm:p-8 rounded-2xl">
+          <form class="space-y-4" onsubmit="event.preventDefault(); alert('Réservation enregistrée ! En production, le restaurateur reçoit cet email instantanément.');">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold uppercase text-stone-400 mb-1">Votre Nom</label>
+                <input type="text" required placeholder="Jean Dupont" class="w-full bg-stone-900 border border-stone-700 rounded-xl px-4 py-2.5 text-white placeholder-stone-500 text-sm focus:outline-none focus:border-amber-500">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold uppercase text-stone-400 mb-1">Téléphone</label>
+                <input type="tel" required placeholder="06 12 34 56 78" class="w-full bg-stone-900 border border-stone-700 rounded-xl px-4 py-2.5 text-white placeholder-stone-500 text-sm focus:outline-none focus:border-amber-500">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold uppercase text-stone-400 mb-1">Date & Heure</label>
+                <input type="datetime-local" required class="w-full bg-stone-900 border border-stone-700 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold uppercase text-stone-400 mb-1">Nombre de personnes</label>
+                <select class="w-full bg-stone-900 border border-stone-700 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500">
+                  <option>2 personnes</option>
+                  <option>3 personnes</option>
+                  <option>4 personnes</option>
+                  <option>5+ personnes</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-3 rounded-xl transition shadow-lg shadow-amber-600/30">
+              Confirmer la réservation
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="contact" class="bg-stone-950 text-stone-400 py-12 border-t border-stone-900 text-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl">🍕</span>
+        <span class="font-serif font-bold text-white text-lg">Bella Napoli</span>
+        <span class="text-xs text-stone-500 pl-2">© 2026. Tous droits réservés.</span>
+      </div>
+      <p class="text-xs text-stone-500 text-center sm:text-right">
+        Site vitrine conçu pour les commerces d'exception.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ================= BOUTON FLOTTANT APPEL RAPIDE SUR MOBILE ================= -->
+  <div class="fixed bottom-6 right-6 z-50 md:hidden">
+    <a href="tel:+33123456789" class="bg-amber-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transform active:scale-95 transition">
+      <span class="text-xl">📞</span>
+    </a>
+  </div>
+
+  <!-- SCRIPT DU MENU BURGER MOBILE -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
